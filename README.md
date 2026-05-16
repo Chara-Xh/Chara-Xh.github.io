@@ -1,1 +1,430 @@
-# FlSnowfluff.github.io
+[index.html](https://github.com/user-attachments/files/27852219/index.html)
+# FlSnowfluff.github.io<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiaohan Zhang</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --text: #1a1814;
+      --muted: #7a7670;
+      --accent: #2d5a3d;
+      --accent-light: #e8f0ea;
+      --border: #e2ded8;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* Top bar */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247, 245, 240, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-name {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    nav { display: flex; gap: 1.5rem; }
+    nav a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* Main layout */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 120px 2rem 80px;
+    }
+
+    /* Hero section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 5rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s ease forwards 0.1s;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-affil {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .hero-bio {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 7px 14px;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-links a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 4px;
+      background: var(--accent-light);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 42px;
+      color: var(--accent);
+      letter-spacing: -2px;
+    }
+
+    .avatar-caption {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+    section:nth-of-type(1) { animation-delay: 0.25s; }
+    section:nth-of-type(2) { animation-delay: 0.35s; }
+    section:nth-of-type(3) { animation-delay: 0.45s; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* News */
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+
+    .news-item:first-child { border-top: 1px solid var(--border); }
+
+    .news-date {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .news-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Interests */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .interest-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 18px 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .interest-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .interest-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .interest-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .interest-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .edu-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .edu-item:first-child { border-top: 1px solid var(--border); }
+
+    .edu-year {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding-top: 2px;
+    }
+
+    .edu-school {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .edu-degree {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero { grid-template-columns: 1fr; }
+      .avatar-wrap { display: none; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="header-name">Xiaohan Zhang</span>
+  <nav>
+    <a href="#news">News</a>
+    <a href="#interests">Research</a>
+    <a href="#education">Education</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div>
+      <div class="hero-label">Welcome</div>
+      <h1>Xiaohan<br><em>Zhang</em></h1>
+      <div class="hero-affil">
+        School of Telecommunications Engineering<br>
+        Xidian University · Xi'an, China
+      </div>
+      <p class="hero-bio">
+        I am an undergraduate student at Xidian University, broadly interested in signal processing, communications, and machine learning. I am actively exploring research directions and open to collaborations.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com">✉ Email</a>
+        <a href="https://github.com/Xiaohan-Zhang" target="_blank">⌥ GitHub</a>
+      </div>
+    </div>
+    <div class="avatar-wrap">
+      <div class="avatar">XZ</div>
+      <div class="avatar-caption">Xiaohan Zhang<br>西安电子科技大学</div>
+    </div>
+  </div>
+
+  <section id="news">
+    <div class="section-header">
+      <h2>News</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="news-list">
+      <div class="news-item">
+        <span class="news-date">2025.09</span>
+        <span class="news-text">Started undergraduate studies at Xidian University, School of Telecommunications Engineering.</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2025.05</span>
+        <span class="news-text">Created this homepage. More updates coming soon!</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="section-header">
+      <h2>Research Interests</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <span class="interest-icon">📡</span>
+        <div class="interest-title">Communications</div>
+        <div class="interest-desc">Wireless systems, signal processing, and next-generation network architectures.</div>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">🤖</span>
+        <div class="interest-title">Machine Learning</div>
+        <div class="interest-desc">Applications of deep learning to signal processing and communications.</div>
+      </div>
+      <div class="interest-card">
+        <span class="interest-icon">🔬</span>
+        <div class="interest-title">Exploring</div>
+        <div class="interest-desc">Actively seeking new research directions and open to interdisciplinary collaboration.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-header">
+      <h2>Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="news-list">
+      <div class="edu-item">
+        <span class="edu-year">2024 –</span>
+        <div>
+          <div class="edu-school">Xidian University（西安电子科技大学）</div>
+          <div class="edu-degree">B.Eng. in Telecommunications Engineering</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Xiaohan Zhang · Built with GitHub Pages
+</footer>
+
+</body>
+</html>
