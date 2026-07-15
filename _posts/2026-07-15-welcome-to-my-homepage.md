@@ -2,7 +2,7 @@
 title: Welcome to My Academic Homepage
 date: 2026-07-15 12:00:00 +0800
 categories: [Personal, Website]
-tags: ["Machine Learning", "通信工程"]
+tags: ["Machine Learning", "Communications Engineering"]
 description: An introduction to this site and what I plan to document here.
 ---
 

@@ -4,14 +4,14 @@
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.4-CC0000?logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![Chirpy](https://img.shields.io/badge/theme-Chirpy-2f80ed)](https://github.com/cotes2020/jekyll-theme-chirpy)
 
-Chara 的个人学术主页与技术博客，主要记录 **Machine Learning**、**通信工程**、课程学习和技术实践。
+Chara 的个人学术主页与技术博客，主要记录 **Machine Learning**、**Communications Engineering**、课程学习和技术实践。
 
 主页地址：<https://chara-xh.github.io/>
 
 ## 网站内容
 
 - Machine Learning 学习笔记与实验记录
-- 通信工程、信号处理相关内容
+- Communications Engineering、信号处理相关内容
 - 论文与技术资料阅读总结
 - 课程记录、项目进展与阶段性思考
 
@@ -37,7 +37,7 @@ YYYY-MM-DD-post-title.md
 title: 文章标题
 date: 2026-07-15 12:00:00 +0800
 categories: [Notes, Machine Learning]
-tags: ["Machine Learning", "通信工程"]
+tags: ["Machine Learning", "Communications Engineering"]
 description: 一句话介绍文章内容。
 ---
 ```
