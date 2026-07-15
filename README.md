@@ -4,68 +4,68 @@
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.4-CC0000?logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![Chirpy](https://img.shields.io/badge/theme-Chirpy-2f80ed)](https://github.com/cotes2020/jekyll-theme-chirpy)
 
-Chara 的个人学术主页与技术博客，主要记录 **Machine Learning**、**Communications Engineering**、课程学习和技术实践。
+Chara's personal academic homepage and technical blog, focused on **Machine Learning**, **Communications Engineering**, coursework, and technical experiments.
 
-主页地址：<https://chara-xh.github.io/>
+Live site: <https://chara-xh.github.io/>
 
-## 网站内容
+## Contents
 
-- Machine Learning 学习笔记与实验记录
-- Communications Engineering、信号处理相关内容
-- 论文与技术资料阅读总结
-- 课程记录、项目进展与阶段性思考
+- Machine Learning notes and experiments
+- Communications Engineering and signal-processing topics
+- Paper and technical-book reading notes
+- Course records, project updates, and study reflections
 
-## 技术栈
+## Technology
 
-- [Jekyll](https://jekyllrb.com/) 静态网站生成器
-- [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 博客主题
-- GitHub Actions 自动构建与部署
-- GitHub Pages 网站托管
+- [Jekyll](https://jekyllrb.com/) for static-site generation
+- [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) as the blog theme
+- GitHub Actions for automated builds and deployment
+- GitHub Pages for hosting
 
-## 发布文章
+## Publishing a Post
 
-在 `_posts` 目录创建 Markdown 文件，文件名格式为：
+Create a Markdown file in `_posts` using this filename format:
 
 ```text
 YYYY-MM-DD-post-title.md
 ```
 
-文章需要包含 Front Matter：
+Each post begins with Front Matter:
 
 ```yaml
 ---
-title: 文章标题
+title: Post title
 date: 2026-07-15 12:00:00 +0800
 categories: [Notes, Machine Learning]
 tags: ["Machine Learning", "Communications Engineering"]
-description: 一句话介绍文章内容。
+description: A concise description of the post.
 ---
 ```
 
-提交并推送到 `main` 分支后，GitHub Actions 会自动构建并更新主页。
+Commit and push the file to `main`. GitHub Actions will build and deploy the updated site automatically.
 
-## 本地预览
+## Local Preview
 
-需要 Ruby 3.1 或更高版本：
+Ruby 3.1 or later is required:
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-随后访问 <http://127.0.0.1:4000/>。
+Open <http://127.0.0.1:4000/> after the server starts.
 
-## 主要目录
+## Project Structure
 
 ```text
 .
-├── _config.yml       # 站点配置
-├── _posts/           # 博客文章
-├── _tabs/            # About、Categories、Tags、Archives
-├── _data/            # 联系方式与分享配置
-└── .github/workflows # 自动部署工作流
+├── _config.yml       # Site configuration
+├── _posts/           # Blog posts
+├── _tabs/            # About, Categories, Tags, and Archives
+├── _data/            # Contact and sharing configuration
+└── .github/workflows # Automated deployment workflow
 ```
 
 ## License
 
-站点框架基于 Chirpy 的 MIT License；文章内容版权归作者所有，除非文章中另有说明。
+The site framework is based on Chirpy and distributed under the MIT License. Unless otherwise stated, the written content remains the property of its author.
