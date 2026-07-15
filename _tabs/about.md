@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# Xiaohan Zhang
+# Chara
 
-I am an undergraduate student in the **School of Telecommunications Engineering at Xidian University**, Xi'an, China. I began my B.Eng. studies in 2025.
+I am Chara, an undergraduate student in the **School of Telecommunications Engineering at Xidian University**, Xi'an, China. I began my B.Eng. studies in 2025.
 
 My current interests sit at the intersection of communications, signal processing, and machine learning. I use this site to collect learning notes, technical experiments, and reflections as those interests become more focused.
 

@@ -2,7 +2,7 @@
 title: Research Interests and Questions I Want to Explore
 date: 2026-07-14 18:00:00 +0800
 categories: [Research, Overview]
-tags: [communications, signal-processing, machine-learning]
+tags: ["Machine Learning", "通信工程"]
 description: A working map of my interests in communications, signal processing, and machine learning.
 ---
 

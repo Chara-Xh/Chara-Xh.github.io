@@ -2,13 +2,13 @@
 title: Welcome to My Academic Homepage
 date: 2026-07-15 12:00:00 +0800
 categories: [Personal, Website]
-tags: [github-pages, jekyll, chirpy]
+tags: ["Machine Learning", "通信工程"]
 description: An introduction to this site and what I plan to document here.
 ---
 
 Welcome to my academic homepage.
 
-I am **Xiaohan Zhang**, an undergraduate student in the School of Telecommunications Engineering at Xidian University. My current interests include communications, signal processing, and machine learning.
+I am **Chara**, an undergraduate student in the School of Telecommunications Engineering at Xidian University. My current interests include communications, signal processing, and machine learning.
 
 ## Why This Site Exists
 
