@@ -3,7 +3,7 @@
 Personal academic homepage and technical blog, built with Jekyll and the
 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme.
 
-Live site: <https://flsnowfluff.github.io>
+Live site: <https://chara-xh.github.io>
 
 ## Writing a Post
 
